@@ -51,6 +51,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Log.d("msg","orientaion Changes"+Configuration.ORIENTATION_PORTRAIT);
+        Log.d("MSG","orientaion Changes"+Configuration.ORIENTATION_PORTRAIT);
     }
 }
