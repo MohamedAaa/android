@@ -4,10 +4,12 @@ import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static int i =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,5 +61,9 @@ public class MainActivity extends AppCompatActivity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         Log.d("MSG","orientaion Changes"+Configuration.ORIENTATION_PORTRAIT);
+    }
+
+    public void addNum(View view) {
+        Toast.makeText(this, "I = "+(i++), Toast.LENGTH_SHORT).show();
     }
 }
