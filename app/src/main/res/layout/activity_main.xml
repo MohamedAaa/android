@@ -20,6 +20,12 @@
         android:onClick="addNum"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="34dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset"
+        android:onClick="addNum"
+        android:text="@string/reset"/>
 
 
 </LinearLayout>

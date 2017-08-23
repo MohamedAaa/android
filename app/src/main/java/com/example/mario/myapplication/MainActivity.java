@@ -64,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addNum(View view) {
-        Toast.makeText(this, "I = "+(i++), Toast.LENGTH_SHORT).show();
+        if (view.getId() == R.id.button){
+            Toast.makeText(this, "I = "+(++i), Toast.LENGTH_SHORT).show();
+        }else{
+            i = 0;
+            Toast.makeText(this, "I = "+(++i), Toast.LENGTH_SHORT).show();
+
+        }
     }
 }
