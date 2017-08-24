@@ -8,10 +8,6 @@
     android:orientation="vertical"
     tools:context="com.example.mario.myapplication.MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hintName"/>
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
@@ -24,6 +20,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/reset"
         android:text="@string/reset"/>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/second"
+        android:text="@string/Go"/>
 
 </LinearLayout>
