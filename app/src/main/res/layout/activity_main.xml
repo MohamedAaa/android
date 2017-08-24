@@ -8,6 +8,16 @@
     android:orientation="vertical"
     tools:context="com.example.mario.myapplication.MainActivity">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMail"
+        android:hint="@string/EnterMail"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/txtMsg"
+        android:hint="@string/EnterMsg"/>
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"

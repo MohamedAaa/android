@@ -9,19 +9,23 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.net.URI;
 import java.net.URL;
 import java.util.Calendar;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn1,btn2,second,sendMail;
+    TextView textMail,textMsg;
     private static int i =0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, "OnCreate", Toast.LENGTH_SHORT).show();
+        textMail = (TextView) findViewById(R.id.txtMail);
+        textMsg = (TextView) findViewById(R.id.txtMsg);
         btn1 = (Button) findViewById(R.id.button1);
         btn1.setOnClickListener(this);
 
@@ -48,9 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"recipient@example.com"});
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{textMail.getText().toString()});
                 i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
-                i.putExtra(Intent.EXTRA_TEXT   , "body of email");
+                i.putExtra(Intent.EXTRA_TEXT   ,textMsg.getText().toString());
                 try {
                     startActivity(Intent.createChooser(i, "Send mail"));
                 } catch (android.content.ActivityNotFoundException ex) {

@@ -8,4 +8,6 @@
     <string name="back">Back</string>
     <string name="mail">Send Mail</string>
     <string name="SendMail">Send Mail</string>
+    <string name="EnterMail">Enter To Mail</string>
+    <string name="EnterMsg">Enter Mail Msg</string>
 </resources>
