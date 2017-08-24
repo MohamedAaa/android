@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.mario.myapplication.second">
+    tools:context="com.example.mario.myapplication.SecondActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,4 +13,10 @@
         android:gravity="center"
         android:textSize="40dp"
         android:text="@string/welcome"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:onClick="back"
+        android:text="@string/back"/>
 </LinearLayout>
